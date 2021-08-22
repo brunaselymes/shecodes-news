@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-container"> 
+    <form class="form-wrapper" action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="button" type="submit" value="Create story" />
+    </form>
+</div>
+{% endblock content %}

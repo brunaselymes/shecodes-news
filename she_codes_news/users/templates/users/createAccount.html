@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container account-page">
+<h2>Create Account</h2>
+<div class="form-container"> 
+<form class="form-wrapper" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input class="button" type="submit" value="Create Account" />
+</form>
+</div>
+</div>
+{% endblock %}
