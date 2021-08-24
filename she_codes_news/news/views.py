@@ -10,12 +10,19 @@ class IndexView(generic.ListView):
     template_name = 'news/index.html'
 
     def get_queryset(self):
-        '''Return all news stories.'''
-        return NewsStory.objects.all()
+        return []
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        ##context['latest_stories'] = NewsStory.objects.filter(author__name='admin', category="cats").all()[:4]
+
+        query = self.request.GET.get('search')
+        search_results = None
+        if query:
+            postresult = NewsStory.objects.filter(
+                author__username__contains=query)
+            search_results = postresult
+
+        context['search_results'] = search_results
         context['latest_stories'] = NewsStory.objects.all()[:4]
         context['all_stories'] = NewsStory.objects.all()
         return context

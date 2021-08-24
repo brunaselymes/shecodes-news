@@ -12,6 +12,15 @@
   </div>
   {% endif %}
   
+  {% include "./searchBar.html" %}
+  {% for result in search_results %}
+    {% include "./storyCard.html" with story=result %}
+    {% if query is not None %}
+      No results to display
+    {% endif %}
+  {% endfor %}
+
+{% if search_results is None %}
   <h2>Latest News</h2>
   <div id="latest-stories">
     {% if latest_stories %} 
@@ -32,5 +41,6 @@
       <p>No stories are available.</p>
     {% endif %}
   </div>
+  {% endif %}
 </div>
 {% endblock %}

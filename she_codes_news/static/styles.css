@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
-    /* background-color: rgb(240, 239, 239); */
     background-color: #FFF;
 }
 
@@ -11,10 +10,6 @@ header {
     justify-content: space-between;
     border-bottom: 1px solid #000;
 }
-
-/* img {
-    filter: grayscale(100%);
-} */
 
 h1 {
     font-family: 'Bebas Neue', cursive;
@@ -127,7 +122,6 @@ p {
 .container .header {
     text-align: center;
     margin-bottom: 1.5em;
-
 }
 
 .inner-div {
@@ -138,7 +132,6 @@ p {
     border: none;
     background-color: #EEA231;
     padding: 1em;
-    float: right;
     color: #000;
     border-radius: 15px;
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
@@ -154,20 +147,9 @@ nav a:hover {
 }
 
 .button-wrapper {
-    padding: 1em;
+    padding-top: 1em;
     display: flex;
     flex-flow: row-reverse;
-}
-
-.searchbox {
-    padding: 10px;
-    width: 100%;
-    display: flex;
-    width: 40%;
-}
-
-.searchbox input .button {
-    width: 100%;
 }
 
 .account-page input {
@@ -180,4 +162,26 @@ nav a:hover {
 
 .account-page ul {
     display: none;
+}
+
+.search-bar .button {
+    min-width: 133px;
+}
+
+.search-wrapper {
+    display: flex;
+}
+
+form.search-wrapper {
+    width: 100%;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+input.search-bar {
+    width: 100%;
+    border-radius: 5px;
+    margin-right: 2em;
+    padding: 1em;
+    border: 1.2px solid #000;
 }

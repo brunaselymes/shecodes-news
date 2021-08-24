@@ -1,10 +1,8 @@
-{% extends 'base.html' %}
-
 {% block content %}
-<div class="form-container"> 
-    <form class="form-wrapper searchbar" action="" method="post">
+<div class="search-wrapper"> 
+    <form class="search-wrapper" action="" method="GET">
         {% csrf_token %}
-        <input type="search" placeholder="Search stories by Author">
+        <input class="search-bar" name="search" type="search" placeholder="Search stories by Author">
         <input class="button" type="submit" value="Search" />
     </form>
 </div>
