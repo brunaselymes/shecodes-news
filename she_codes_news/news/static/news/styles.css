@@ -96,3 +96,9 @@
     object-fit: cover;
     border-radius: 3px;
 }
+
+.search-results .story-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+}

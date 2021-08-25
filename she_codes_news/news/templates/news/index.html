@@ -14,10 +14,12 @@
   
   {% include "./searchBar.html" %}
   {% for result in search_results %}
+  <div class="search-results">
     {% include "./storyCard.html" with story=result %}
     {% if query is not None %}
       No results to display
     {% endif %}
+    </div>
   {% endfor %}
 
 {% if search_results is None %}
