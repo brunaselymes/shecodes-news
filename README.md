@@ -1,3 +1,4 @@
 # Plus Resources: Django Project Starter
 
-Starter code for the Plus Django project.
+Published project:
+https://afternoon-hamlet-07690.herokuapp.com/
